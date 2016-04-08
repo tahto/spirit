@@ -12,6 +12,6 @@
    :restrict     {}
    :default      {:check identity}})
 
-(defmulti corporeal (fn [realm essence opts] realm))
+(defmulti imbue (fn [realm essence opts] realm))
 
-(defmulti incorporeal (fn [realm schema opts] realm))
+(defmulti transcend (fn [realm corporeal opts] realm))

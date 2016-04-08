@@ -12,8 +12,8 @@
                                      (path/val v)
                                      v)]
                              (if (= (-> base/datomic-specific k :default) v)
-                               out)
-                             (assoc out k v)))
+                               out
+                               (assoc out k v))))
                          {}
                          (dissoc datum :db/ident))]
     [path attrs]))

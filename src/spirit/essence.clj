@@ -1,8 +1,14 @@
 (ns spirit.essence
   (:require [spirit.essence.common :as essence]))
 
-(defn corporeal [realm essence]
-  (essence/corporeal realm essence))
+(defn imbue
+  ([realm essence]
+   (imbue realm essence {}))
+  ([realm essence opts]
+   (essence/imbue realm essence opts)))
 
-(defn incorporeal [realm schema]
-  (essence/corporeal realm schema))
+(defn transcend
+  ([realm corporeal]
+   (transcend realm corporeal {}))
+  ([realm corporeal opts]
+   (essence/transcend realm corporeal opts)))

@@ -2,9 +2,13 @@
   (:require [spirit.essence.common :as essence]
             [spirit.essence.elasticsearch.skeleton :as skeleton]
             [spirit.essence.elasticsearch.mapping :as mapping]))
-(comment
 
-  (require '[cheshire.core :as json])
+(defmethod essence/imbue :elasticsearch
+  [_ essence {:keys [mapping]}]
+  ;;(generate/datomic essence top embed)
+  )
 
-  (./pull-project)
+(defmethod essence/transcend :elasticsearch
+  [_ corporeal _]
+  ;;(analyse/analyse corporeal)
   )
